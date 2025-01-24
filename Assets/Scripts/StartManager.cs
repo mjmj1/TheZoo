@@ -2,12 +2,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class StartManager : MonoBehaviour
 {
+    // Singleton to keep the username
+    public static StartManager instance;
+    public string username = string.Empty;
+
     // initial page
     public GameObject nicknameObj;
     public TMP_InputField nicknameIpf;
+
     // after clicking start
     public GameObject startObj;
 
@@ -16,6 +22,14 @@ public class StartManager : MonoBehaviour
 
     // setting panel
     public GameObject settingPanel;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
 
     public void OnStartBtnClick()
     {
@@ -33,13 +47,16 @@ public class StartManager : MonoBehaviour
             {
                 nicknameObj.SetActive(false);
                 startObj.SetActive(false);
-                
+
+                username = nicknameIpf.text;
+
                 SceneManager.LoadScene(Strings.ROOM_SCENE);
             }
         }
         else
         {
             nicknameObj.SetActive(true);
+            nicknameIpf.ActivateInputField();
         }
     }
 
