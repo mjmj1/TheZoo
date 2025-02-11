@@ -130,10 +130,10 @@ GameObject:
   - component: {fileID: 137815511}
   - component: {fileID: 137815510}
   - component: {fileID: 137815509}
-  - component: {fileID: 137815508}
+  - component: {fileID: 137815514}
   - component: {fileID: 137815512}
   - component: {fileID: 137815506}
-  - component: {fileID: 137815515}
+  - component: {fileID: 137815513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -155,27 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WorldCenter: {fileID: 469522892}
   gravityStrength: 9.81
---- !u!65 &137815508
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137815505}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &137815509
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -238,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 137815505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 60, z: 0}
+  m_LocalPosition: {x: 0, y: 15.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -269,9 +248,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &137815515
+--- !u!114 &137815513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,18 +259,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 137815505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ced42521362554b98cbf41e857770c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3bcb61e2d7e41409cedaf29e08fe92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 330585546}
-  cameraDistance: 5
-  cameraOffset: {x: 0, y: 5, z: -5}
-  sphereCenter: {fileID: 469522892}
-  moveSpeed: 5
-  rotationSpeed: 10
-  mouseSensitivity: 3
-  pitchMax: 2
-  pitchMin: -20
+  WorldCenter: {fileID: 469522892}
+  moveSpeed: 10
+  mouseSensitivity: 10
+--- !u!135 &137815514
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137815505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +373,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 56.45, z: -10}
+  m_LocalPosition: {x: 0, y: 15, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -531,7 +525,7 @@ Transform:
   m_GameObject: {fileID: 469522888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 40, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -34,8 +34,8 @@ public class PlayerController : MonoBehaviour
         
         var directionToCenter = (transform.position - sphereCenter.position).normalized;
         
-        // transform.Rotate(0, mouseX, 0);
-        // transform.up = directionToCenter;
+        transform.Rotate(0, mouseX, 0);
+        transform.up = directionToCenter;
         
         var targetRotation = Quaternion.FromToRotation(transform.up, directionToCenter) * transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
