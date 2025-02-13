@@ -930,11 +930,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 57633ab6-550f-4736-9185-f0e4e3b0a804
+  cloudProjectId: 5aa1d069-5321-4417-b7e7-722a33a619c3
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: TheZoo
-  organizationId: mjong3365
+  organizationId: rudcksdid
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
