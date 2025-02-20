@@ -18,19 +18,19 @@ public class RoomManager : MonoBehaviour
         GameManager.Instance.roomManager = true;
         // move to Room Setting Scene
         SceneManager.LoadScene(Strings.ROOM_SETTING_SCENE);
-        //SceneManager.LoadScene("NGO_Setup");
     }
 
     public void OnJoinBtnClick()
     {
-        joinPopup.SetActive(true);
+        //joinPopup.SetActive(true);
         // Players who choose "Join" button will be the members
         GameManager.Instance.roomManager = false;
+        SceneManager.LoadScene(Strings.ROOM_SETTING_SCENE);
     }
 
     public void OnCloseBtnClick()
     {
-        joinPopup.SetActive(false);
+        //joinPopup.SetActive(false);
     }
 
     public void OnBackBtnClick()
